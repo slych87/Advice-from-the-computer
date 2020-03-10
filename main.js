@@ -1,13 +1,13 @@
 const options = ['opcja 1', 'opcja 2'];
 
 const showAdvice = () => {
-    const index = Math.floor(Math.random() * options.length)
+    const index = Math.floor(Math.random() * options.length);
     console.log(index);
     document.querySelector('h1').textContent = options[index];
 }
 
 const addOption = (e) => {
-    e.priventDefault();
+    e.preventDefault();
 
     const input = document.querySelector('input');
     options.push(input.value);
@@ -16,12 +16,12 @@ const addOption = (e) => {
 }
 
 const resetOptions = (e) => {
-    e.priventDefault();
-    option.length = 0;
+    e.preventDefault();
+    options.length = 0;
 }
 
 const showOptions = () => {
-    alert(options.join(' --- --- '));
+    alert(options.join(' --- ---'));
 }
 
 
